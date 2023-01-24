@@ -254,6 +254,19 @@ body {
 
 @media (max-width:768px) {
 
+    .intro-text {
+        font-size: 2rem;
+    }
+
+    .first-line {
+        position: relative;
+        top: 2.4rem;
+    }
+
+    .wrapper {
+        width: fit-content;
+    }
+
     .passwords {
         display: flex;
         flex-direction: column;
