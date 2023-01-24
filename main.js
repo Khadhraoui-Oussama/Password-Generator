@@ -64,7 +64,6 @@ const letters = [
   "z",
 ];
 var possibleCombination = [];
-console.log("ara" + possibleCombination);
 let numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 let spChars = [
   "~",
@@ -98,10 +97,10 @@ let spChars = [
   "/",
 ];
 //the copy functions
-function copypass1() {
+function copyPass1() {
   var copyText1 = document.getElementById("password1");
-  copyText1.select();
-  copyText1.setSelectionRange(0, 99999);
+  copyText1.select;
+  copyText1.setSelectionRange;
   navigator.clipboard
     .writeText(copyText1.value)
     .then(() => {
@@ -112,10 +111,10 @@ function copypass1() {
     });
 }
 
-function copypass2() {
+function copyPass2() {
   var copyText12 = document.getElementById("password2");
-  copyText12.select();
-  copyText12.setSelectionRange(0, 99999);
+  copyText12.select;
+  copyText12.setSelectionRange;
   navigator.clipboard
     .writeText(copyText12.value)
     .then(() => {
@@ -136,7 +135,6 @@ function generate() {
   for (let i = 0; i < letters.length; i++) {
     possibleCombination.push(letters[i]);
   }
-  console.log(possibleCombination);
   lengthPass = document.getElementById("length").value;
 
   if (numbersCheck) {
@@ -144,13 +142,11 @@ function generate() {
       possibleCombination.push(numbers[i]);
     }
   }
-  console.log("numb:" + possibleCombination);
   if (spCharsCheck) {
     for (let i = 0; i < spChars.length; i++) {
       possibleCombination.push(spChars[i]);
     }
   }
-  console.log("sp:" + possibleCombination);
   for (let i = 0; i < lengthPass; i++) {
     passGenerated1 +=
       possibleCombination[
