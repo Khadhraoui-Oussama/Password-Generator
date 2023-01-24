@@ -156,12 +156,32 @@ function generate() {
   pass2.textContent = "";
   passGenerated1 = "";
   passGenerated2 = "";
+
   numbersCheck = document.getElementById("numbers").checked;
   spCharsCheck = document.getElementById("sp-chars").checked;
   for (let i = 0; i < letters.length; i++) {
     possibleCombination.push(letters[i]);
   }
-  lengthPass = document.getElementById("length").value;
+  // lengthPass = document.getElementById("length").value;
+  // do {
+  //   document.getElementById("error").textContent =
+  //     "Please choose a password length between 8 and 40";
+  //   document.getElementById("error").style.color = "red";
+
+  //   lengthPass = document.getElementById("length").value;
+  // }while (lengthPass < 8 || lengthPass > 40)
+  let lengthPass = document.getElementById("length").value;
+  let isValid = false;
+  while (!isValid) {
+    if (lengthPass < 8 || lengthPass > 40) {
+      document.getElementById("error").textContent =
+        "Please choose a password length between 8 and 40";
+      document.getElementById("error").style.color = "red";
+      lengthPass = parseInt(prompt("Please enter a number between 8 and 40"));
+    } else {
+      isValid = true;
+    }
+  }
 
   if (numbersCheck) {
     for (let i = 0; i < numbers.length; i++) {
