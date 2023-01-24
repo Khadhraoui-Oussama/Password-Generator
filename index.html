@@ -76,7 +76,7 @@
           <div class="pass-wrapper">
             <div id="password1" class="password"></div>
             <div class="copy">
-              <button onclick="copyPass1()">
+              <button onclick="buttonPress()">
                 <?xml version="1.0" encoding="utf-8"?>
                 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                 <svg
@@ -105,12 +105,18 @@
                   </g>
                 </svg>
               </button>
+              <script type="text/javascript">
+                const buttonPress = () => {
+                  copyToClipboard(password1.textContent);
+                  console.log("Clipboard updated 📥\nNow try pasting!");
+                };
+              </script>
             </div>
           </div>
           <div class="pass-wrapper">
             <div id="password2" class="password"></div>
             <div class="copy">
-              <button onclick="copyPass2()">
+              <button onclick="buttonPress2()">
                 <?xml version="1.0" encoding="utf-8"?>
                 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                 <svg
@@ -139,6 +145,12 @@
                   </g>
                 </svg>
               </button>
+              <script type="text/javascript">
+                const buttonPress2 = () => {
+                  copyToClipboard(password2.textContent);
+                  console.log("Clipboard updated 📥\nNow try pasting!");
+                };
+              </script>
             </div>
           </div>
         </div>
